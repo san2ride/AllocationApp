@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7265E4E2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7265E4C2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld */; };
 		F729F6CF2DF9FFAD004CE1CC /* AllocationLedgerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729F6CB2DF9FFAD004CE1CC /* AllocationLedgerApp.swift */; };
 		F729F6D02DF9FFAD004CE1CC /* AllocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729F6CC2DF9FFAD004CE1CC /* AllocationView.swift */; };
 		F729F6D12DF9FFAD004CE1CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F729F6C92DF9FFAD004CE1CC /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7265E4D2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllocationLedgerModel.xcdatamodel; sourceTree = "<group>"; };
 		F729F6AD2DF9FF44004CE1CC /* AllocationLedger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllocationLedger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F729F6C92DF9FFAD004CE1CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F729F6CB2DF9FFAD004CE1CC /* AllocationLedgerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationLedgerApp.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				F729F6CB2DF9FFAD004CE1CC /* AllocationLedgerApp.swift */,
 				F729F6CC2DF9FFAD004CE1CC /* AllocationView.swift */,
 				F729F6CD2DF9FFAD004CE1CC /* Assets.xcassets */,
+				F7265E4C2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld */,
 			);
 			path = AllocationLedger;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7265E4E2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld in Sources */,
 				F729F6CF2DF9FFAD004CE1CC /* AllocationLedgerApp.swift in Sources */,
 				F729F6D02DF9FFAD004CE1CC /* AllocationView.swift in Sources */,
 				F729F6D52DF9FFD1004CE1CC /* CoreDataProvider.swift in Sources */,
@@ -359,6 +363,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7265E4C2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7265E4D2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodel */,
+			);
+			currentVersion = F7265E4D2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodel */;
+			path = AllocationLedgerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F729F6A52DF9FF44004CE1CC /* Project object */;
 }
