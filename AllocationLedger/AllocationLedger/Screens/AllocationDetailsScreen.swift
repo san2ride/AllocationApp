@@ -25,6 +25,16 @@ struct AllocationDetailsScreen: View {
         !title.isEmptyOrWhitespace && amount != nil && Double(amount!) > 0
     }
     
+    private var total: Double {
+        return expenses.reduce(0) { result, expense in
+            expense.amount + result
+        }
+    }
+    
+    private var remaining: Double {
+        allocation.limit - total
+    }
+    
     private func addExpense() {
         let expense = Expense(context: context)
         expense.title = title
@@ -57,11 +67,26 @@ struct AllocationDetailsScreen: View {
                     .disabled(!isFormValid)
             }
             Section("Expenses") {
-                List(expenses) { expense in
-                    HStack {
-                        Text(expense.title ?? "")
-                        Spacer()
-                        Text(expense.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                List {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Total")
+                            Spacer()
+                            Text(total, format: .currency(code: Locale.currencyCode))
+                        }
+                        HStack {
+                            Text("Remaining")
+                            Spacer()
+                            Text(remaining, format: .currency(code: Locale.currencyCode))
+                                .foregroundStyle(remaining < 0 ? .red : .green)
+                        }
+                    }
+                    ForEach(expenses) { expense in
+                        HStack {
+                            Text(expense.title ?? "")
+                            Spacer()
+                            Text(expense.amount, format: .currency(code: Locale.currencyCode))
+                        }
                     }
                 }
             }
@@ -73,7 +98,7 @@ struct AllocationDetailScreenContainer: View {
     @FetchRequest(sortDescriptors: []) private var allocation: FetchedResults<Allocation>
     
     var body: some View {
-        AllocationDetailsScreen(allocation: allocation[0])
+        AllocationDetailsScreen(allocation: allocation.first(where: { $0.title == "Groceries" })!)
     }
 }
 

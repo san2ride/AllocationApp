@@ -31,10 +31,16 @@ class CoreDataProvider {
         
         let milk = Expense(context: context)
         milk.title = "Milk"
-        milk.amount = 5.45
+        milk.amount = 6.49
         milk.dateCreated = Date()
         
+        let chips = Expense(context: context)
+        chips.title = "Chips"
+        chips.amount = 4.99
+        chips.dateCreated = Date()
+        
         groceries.addToExpenses(milk)
+        groceries.addToExpenses(chips)
         
         do {
             try context.save()

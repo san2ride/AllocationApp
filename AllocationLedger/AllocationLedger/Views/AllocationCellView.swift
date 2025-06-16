@@ -14,7 +14,7 @@ struct AllocationCellView: View {
         HStack {
             Text(allocation.title ?? "")
             Spacer()
-            Text(allocation.limit, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+            Text(allocation.limit, format: .currency(code: Locale.currencyCode))
         }
     }
 }
