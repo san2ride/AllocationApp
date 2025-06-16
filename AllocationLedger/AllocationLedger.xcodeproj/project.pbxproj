@@ -18,6 +18,7 @@
 		F729F6D52DF9FFD1004CE1CC /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729F6D42DF9FFD1004CE1CC /* CoreDataProvider.swift */; };
 		F7453F532E00A2BE003875EC /* AllocationDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7453F522E00A2BE003875EC /* AllocationDetailsScreen.swift */; };
 		F79261AD2E00CA7900116F3D /* Locale+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79261AC2E00CA7900116F3D /* Locale+Ext.swift */; };
+		F79261AF2E00CE0D00116F3D /* ExpenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79261AE2E00CE0D00116F3D /* ExpenseCellView.swift */; };
 		F7BE01E22E0084A200FBB68C /* Allocation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE01E12E0084A200FBB68C /* Allocation+Ext.swift */; };
 		F7BE01E42E008D5F00FBB68C /* AllocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE01E32E008D5F00FBB68C /* AllocationCellView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		F729F6D42DF9FFD1004CE1CC /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		F7453F522E00A2BE003875EC /* AllocationDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationDetailsScreen.swift; sourceTree = "<group>"; };
 		F79261AC2E00CA7900116F3D /* Locale+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Ext.swift"; sourceTree = "<group>"; };
+		F79261AE2E00CE0D00116F3D /* ExpenseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCellView.swift; sourceTree = "<group>"; };
 		F7BE01E12E0084A200FBB68C /* Allocation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Allocation+Ext.swift"; sourceTree = "<group>"; };
 		F7BE01E32E008D5F00FBB68C /* AllocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			children = (
 				F729F6CC2DF9FFAD004CE1CC /* AllocationView.swift */,
 				F7BE01E32E008D5F00FBB68C /* AllocationCellView.swift */,
+				F79261AE2E00CE0D00116F3D /* ExpenseCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				F7265E4E2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld in Sources */,
 				F7265E562DFA34FC009A7976 /* String+Ext.swift in Sources */,
 				F7BE01E22E0084A200FBB68C /* Allocation+Ext.swift in Sources */,
+				F79261AF2E00CE0D00116F3D /* ExpenseCellView.swift in Sources */,
 				F729F6CF2DF9FFAD004CE1CC /* AllocationLedgerApp.swift in Sources */,
 				F7453F532E00A2BE003875EC /* AllocationDetailsScreen.swift in Sources */,
 				F7265E522DFA31AF009A7976 /* AllocationListScreen.swift in Sources */,

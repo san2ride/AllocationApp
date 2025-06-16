@@ -52,7 +52,25 @@ struct AllocationDetailsScreen: View {
         }
     }
     
+    private func deleteExpense(_ indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let expense = expenses[index]
+            context.delete(expense)
+        }
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     var body: some View {
+        VStack {
+            Text(allocation.limit, format: .currency(code: Locale.currencyCode))
+                .frame(maxWidth: .infinity, alignment: .top)
+                .font(.largeTitle)
+                .padding()
+        }
         Form {
             Section("New expense") {
                 TextField("Title", text: $title)
@@ -82,12 +100,8 @@ struct AllocationDetailsScreen: View {
                         }
                     }
                     ForEach(expenses) { expense in
-                        HStack {
-                            Text(expense.title ?? "")
-                            Spacer()
-                            Text(expense.amount, format: .currency(code: Locale.currencyCode))
-                        }
-                    }
+                        ExspenseCellView(expense: expense)
+                    }.onDelete(perform: deleteExpense)
                 }
             }
         }.navigationTitle(allocation.title ?? "")
