@@ -14,7 +14,11 @@ struct AllocationListScreen: View {
     var body: some View {
         VStack {
             List(allocations) { allocation in
-                AllocationCellView(allocation: allocation)
+                NavigationLink {
+                    AllocationDetailsScreen(allocation: allocation)
+                } label: {
+                    AllocationCellView(allocation: allocation)
+                }
             }
         }.navigationTitle("Allocation")
             .toolbar {

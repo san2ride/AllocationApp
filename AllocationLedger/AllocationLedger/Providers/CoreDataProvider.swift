@@ -23,6 +23,9 @@ class CoreDataProvider {
         entertainment.title = "Entertainment"
         entertainment.limit = 500
         entertainment.dateCreated = Date()
+        
+        
+        
         do {
             try context.save()
         } catch {
