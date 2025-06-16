@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AllocationDetailsScreen: View {
+    @Environment(\.managedObjectContext) private var context
     let allocation: Allocation
     
     @State private var title: String = ""
@@ -17,6 +18,22 @@ struct AllocationDetailsScreen: View {
         !title.isEmptyOrWhitespace && amount != nil && Double(amount!) > 0
     }
     
+    private func addExpense() {
+        let expense = Expense(context: context)
+        expense.title = title
+        expense.amount = amount ?? 0
+        expense.dateCreated = Date()
+        
+        allocation.addToExpenses(expense)
+        
+        do {
+            try context.save()
+            title = ""
+            amount = nil
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     var body: some View {
         Form {
             Section("New expense") {
@@ -24,7 +41,7 @@ struct AllocationDetailsScreen: View {
                 TextField("Amount", value: $amount, format: .number)
                     .keyboardType(.numberPad)
                 Button(action: {
-                    
+                    addExpense()
                 }, label: {
                     Text("Save")
                         .frame(maxWidth: .infinity)

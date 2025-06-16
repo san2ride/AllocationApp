@@ -21,10 +21,13 @@ class CoreDataProvider {
         
         let entertainment = Allocation(context: context)
         entertainment.title = "Entertainment"
-        entertainment.limit = 500
+        entertainment.limit = 200
         entertainment.dateCreated = Date()
         
-        
+        let groceries = Allocation(context: context)
+        groceries.title = "Groceries"
+        groceries.limit = 500
+        groceries.dateCreated = Date()
         
         do {
             try context.save()
