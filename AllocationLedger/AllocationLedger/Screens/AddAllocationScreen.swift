@@ -12,9 +12,24 @@ struct AddAllocationScreen: View {
     
     @State private var title: String = ""
     @State private var limit: Double?
+    @State private var errorMessage: String = ""
     
     private var isFormValid: Bool {
         !title.isEmptyOrWhitespace && limit != nil && Double(limit!) > 0
+    }
+    
+    private func saveAllocation() {
+        let allocation = Allocation(context: context)
+        allocation.title = title
+        allocation.limit = limit ?? 0.0
+        allocation.dateCreated = Date()
+        
+        do {
+            try context.save()
+            errorMessage = ""
+        } catch {
+            errorMessage = "Unable to save allocation"
+        }
     }
     
     var body: some View {
@@ -27,7 +42,11 @@ struct AddAllocationScreen: View {
             TextField("Limit", value: $limit, format: .number)
                 .keyboardType(.numberPad)
             Button {
-                // action
+                if !Allocation.exists(context: context, title: title) {
+                    saveAllocation()
+                } else {
+                    errorMessage = "Allocation title already exists"
+                }
             } label: {
                 Text("Save")
                 .frame(maxWidth: .infinity)
@@ -35,6 +54,8 @@ struct AddAllocationScreen: View {
             .buttonStyle(.borderedProminent)
             .disabled(!isFormValid)
             .presentationDetents([.medium])
+            
+            Text(errorMessage)
         }
     }
 }
