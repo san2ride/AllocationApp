@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AddAllocationScreen: View {
+    @Environment(\.managedObjectContext) private var context
+    
     @State private var title: String = ""
     @State private var limit: Double?
     
@@ -39,4 +41,5 @@ struct AddAllocationScreen: View {
 
 #Preview {
     AddAllocationScreen()
+        .environment(\.managedObjectContext, CoreDataProvider.init(inMemory: true).context)
 }

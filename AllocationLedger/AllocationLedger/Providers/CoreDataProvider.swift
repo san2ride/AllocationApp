@@ -15,6 +15,22 @@ class CoreDataProvider {
         persistentContainer.viewContext
     }
     
+    static var preview: CoreDataProvider = {
+        let provider = CoreDataProvider(inMemory: true)
+        let context = provider.context
+        
+        let entertainment = Allocation(context: context)
+        entertainment.title = "Entertainment"
+        entertainment.amount = 500
+        entertainment.dateCreated = Date()
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+        return provider
+    }()
+    
     init(inMemory: Bool = false) {
         persistentContainer = NSPersistentContainer(name: "AllocationLedgerModel")
         

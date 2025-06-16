@@ -16,6 +16,7 @@
 		F729F6D12DF9FFAD004CE1CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F729F6C92DF9FFAD004CE1CC /* Preview Assets.xcassets */; };
 		F729F6D22DF9FFAD004CE1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F729F6CD2DF9FFAD004CE1CC /* Assets.xcassets */; };
 		F729F6D52DF9FFD1004CE1CC /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729F6D42DF9FFD1004CE1CC /* CoreDataProvider.swift */; };
+		F7BE01E22E0084A200FBB68C /* Allocation+ Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE01E12E0084A200FBB68C /* Allocation+ Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F729F6CC2DF9FFAD004CE1CC /* AllocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationView.swift; sourceTree = "<group>"; };
 		F729F6CD2DF9FFAD004CE1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F729F6D42DF9FFD1004CE1CC /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		F7BE01E12E0084A200FBB68C /* Allocation+ Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Allocation+ Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F7265E552DFA34FC009A7976 /* String+Ext.swift */,
+				F7BE01E12E0084A200FBB68C /* Allocation+ Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				F7265E4E2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld in Sources */,
 				F7265E562DFA34FC009A7976 /* String+Ext.swift in Sources */,
+				F7BE01E22E0084A200FBB68C /* Allocation+ Ext.swift in Sources */,
 				F729F6CF2DF9FFAD004CE1CC /* AllocationLedgerApp.swift in Sources */,
 				F7265E522DFA31AF009A7976 /* AllocationListScreen.swift in Sources */,
 				F7265E542DFA3339009A7976 /* AddAllocationScreen.swift in Sources */,

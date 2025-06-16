@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AllocationListScreen: View {
+    @FetchRequest(sortDescriptors: []) private var allocations: FetchedResults<Allocation>
     @State private var isPresented: Bool = false
     
     var body: some View {
         VStack {
-            Text("Allocations will be displayed here...")
+            List(allocations) { allocation in
+                Text(allocation.title ?? "")
+            }
         }.navigationTitle("Allocation")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -30,5 +33,5 @@ struct AllocationListScreen: View {
 #Preview {
     NavigationStack {
         AllocationListScreen()
-    }
+    }.environment(\.managedObjectContext, CoreDataProvider.preview.context)
 }
