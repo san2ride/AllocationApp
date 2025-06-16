@@ -14,6 +14,13 @@ struct AllocationDetailsScreen: View {
     @State private var title: String = ""
     @State private var amount: Double?
     
+    @FetchRequest(sortDescriptors: []) private var expenses: FetchedResults<Expense>
+    
+    init(allocation: Allocation) {
+        self.allocation = allocation
+        _expenses = FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "allocation == %@", allocation))
+    }
+    
     private var isFormValid: Bool {
         !title.isEmptyOrWhitespace && amount != nil && Double(amount!) > 0
     }
@@ -34,6 +41,7 @@ struct AllocationDetailsScreen: View {
             print(error.localizedDescription)
         }
     }
+    
     var body: some View {
         Form {
             Section("New expense") {
@@ -47,6 +55,15 @@ struct AllocationDetailsScreen: View {
                         .frame(maxWidth: .infinity)
                 }).buttonStyle(.borderedProminent)
                     .disabled(!isFormValid)
+            }
+            Section("Expenses") {
+                List(expenses) { expense in
+                    HStack {
+                        Text(expense.title ?? "")
+                        Spacer()
+                        Text(expense.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    }
+                }
             }
         }.navigationTitle(allocation.title ?? "")
     }
