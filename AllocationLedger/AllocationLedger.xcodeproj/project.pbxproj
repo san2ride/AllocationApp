@@ -21,6 +21,7 @@
 		F79261AF2E00CE0D00116F3D /* ExpenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79261AE2E00CE0D00116F3D /* ExpenseCellView.swift */; };
 		F7BE01E22E0084A200FBB68C /* Allocation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE01E12E0084A200FBB68C /* Allocation+Ext.swift */; };
 		F7BE01E42E008D5F00FBB68C /* AllocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE01E32E008D5F00FBB68C /* AllocationCellView.swift */; };
+		F7DE805E2E01E5D600BBC252 /* TagsSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE805D2E01E5D600BBC252 /* TagsSeeder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F79261AE2E00CE0D00116F3D /* ExpenseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCellView.swift; sourceTree = "<group>"; };
 		F7BE01E12E0084A200FBB68C /* Allocation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Allocation+Ext.swift"; sourceTree = "<group>"; };
 		F7BE01E32E008D5F00FBB68C /* AllocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocationCellView.swift; sourceTree = "<group>"; };
+		F7DE805D2E01E5D600BBC252 /* TagsSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSeeder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F729F6D32DF9FFB1004CE1CC /* Providers */,
 				F729F6CA2DF9FFAD004CE1CC /* Preview Content */,
 				F7265E572DFA3504009A7976 /* Extensions */,
+				F7DE805C2E01E5AF00BBC252 /* Seeders */,
 				F729F6CB2DF9FFAD004CE1CC /* AllocationLedgerApp.swift */,
 				F729F6CD2DF9FFAD004CE1CC /* Assets.xcassets */,
 				F7265E4C2DFA3005009A7976 /* AllocationLedgerModel.xcdatamodeld */,
@@ -127,6 +130,14 @@
 				F729F6D42DF9FFD1004CE1CC /* CoreDataProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		F7DE805C2E01E5AF00BBC252 /* Seeders */ = {
+			isa = PBXGroup;
+			children = (
+				F7DE805D2E01E5D600BBC252 /* TagsSeeder.swift */,
+			);
+			path = Seeders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				F7265E522DFA31AF009A7976 /* AllocationListScreen.swift in Sources */,
 				F7BE01E42E008D5F00FBB68C /* AllocationCellView.swift in Sources */,
 				F7265E542DFA3339009A7976 /* AddAllocationScreen.swift in Sources */,
+				F7DE805E2E01E5D600BBC252 /* TagsSeeder.swift in Sources */,
 				F729F6D02DF9FFAD004CE1CC /* AllocationView.swift in Sources */,
 				F729F6D52DF9FFD1004CE1CC /* CoreDataProvider.swift in Sources */,
 				F79261AD2E00CA7900116F3D /* Locale+Ext.swift in Sources */,
