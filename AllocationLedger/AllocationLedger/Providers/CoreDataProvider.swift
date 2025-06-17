@@ -56,6 +56,9 @@ class CoreDataProvider {
         for commonTag in commonTags {
             let tag = Tag(context: context)
             tag.name = commonTag
+            if let tagName = tag.name, ["Food", "Groceries"].contains(tagName) {
+                chips.addToTags(tag)
+            }
         }
         
         do {

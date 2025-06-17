@@ -11,7 +11,7 @@ import CoreData
 class TagsSeeder {
     private var context: NSManagedObjectContext
     
-    /*let commonTags = ["Food",
+    let commonTags = ["Food",
                       "Groceries",
                       "Dining",
                       "Health",
@@ -21,7 +21,7 @@ class TagsSeeder {
                       "Shopping",
                       "Transportation",
                       "Utilities"]
-    */
+    
     
     init(context: NSManagedObjectContext) {
         self.context = context
