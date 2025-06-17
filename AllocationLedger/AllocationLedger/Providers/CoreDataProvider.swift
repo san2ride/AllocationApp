@@ -42,6 +42,22 @@ class CoreDataProvider {
         groceries.addToExpenses(milk)
         groceries.addToExpenses(chips)
         
+        // insert tags
+        let commonTags = ["Food",
+                          "Groceries",
+                          "Dining",
+                          "Health",
+                          "Travel",
+                          "Education",
+                          "Entertainment",
+                          "Shopping",
+                          "Transportation",
+                          "Utilities"]
+        for commonTag in commonTags {
+            let tag = Tag(context: context)
+            tag.name = commonTag
+        }
+        
         do {
             try context.save()
         } catch {
